@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+         #basic-addon1{
+            cursor: pointer;
+        }
+        .navbardiv{
+            width: 70%;
+            margin: auto;
+        }
+        #logo{
+            margin-right: 15px;
+        }
+        .maindiv{
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .videodiv{
+            width: 60%;
+        }
+        .recomend{
+            width: 38%;
+        }
+        .recomend>div{
+            height: 120px;
+            width: 100%;
+            display: flex;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            margin:10px 0px;
+        }
+        #img{
+            height: 100%;
+            width: 35%;
+        }
+        #thumb{
+            height: 100%;
+            width: 100%;
+        }
+        #title{
+            height: 100%;
+            width: 65%;
+            font-size: 0.8em;
+            padding: 5px;
+            word-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #title>p{
+            font-weight: 300;
+        }
+        @media only screen and (min-width:0px) and (max-width:380px){
+            .maindiv{
+               flex-direction: column;
+            }
+            .videodiv{
+                width: 100%;
+                height: 50;
+            }
+            .recomend{
+                width: 100%;
+            }
+            #ifrem{
+                height: 100px;
+            }
+            
+        }
+        @media only screen and (min-width:381px) and (max-width:780px){
+            .maindiv{
+               flex-direction: column;
+            }
+            .videodiv{
+                width: 100%;
+            }
+            .recomend{
+                width: 100%;
+            }
+            #ifrem{
+                height: 300px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="navbardiv">
+        <nav class="navbar navbar-light bg-light">
+            <form class="container">
+              <div class="input-group">
+                <h3 id="logo" onclick="window.location.href = 'index.html'">Sunil Youtube</h3>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" id="search">
+                <span class="input-group-text" id="basic-addon1" onclick="window.location.href = 'index.html'">SEARCH</span>
+              </div>
+            </form>
+          </nav>
+    </div>
+    <div class="maindiv">
+        <div class="videodiv" id="videodiv">
+            <iframe width="100%" height="450px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="ifrem"></iframe>
+        </div>
+        <div class="recomend" id="recomend">
+            <div>
+                <div id="img"></div>
+                <div id="title"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="preview.js"></script>
